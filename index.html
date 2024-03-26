@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dados Game</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="player" id="player1">
+        <h2>Jugador 1</h2>
+        <p>Puntaje Actual:</p>
+        <p><span id="score1">0</span></p>
+        <p>Puntaje Acumulado:</p>
+        <p><span id="totalScore1">0</span></p>
+        <p>Resultado de los Dados:</p>
+        <p><span class="dice" id="diceResult1"></span></p>
+        <button onclick="rollDice(1)" id="rollDiceBtn1">Lanzar Dados</button>
+        <button onclick="rerollDice(1)" id="rerollDiceBtn1" disabled>Volver a Lanzar</button>
+        <button onclick="endTurn(1)" id="endTurnBtn1" disabled>Pasar Turno</button>
+    </div>
+    <div class="player" id="player2">
+        <h2>Jugador 2</h2>
+        <p>Puntaje Actual:</p>
+        <p><span id="score2">0</span></p>
+        <p>Puntaje Acumulado:</p>
+        <p><span id="totalScore2">0</span></p>
+        <p>Resultado de los Dados:</p>
+        <p><span class="dice" id="diceResult2"></span></p>
+        <button onclick="rollDice(2)" id="rollDiceBtn2" disabled>Lanzar Dados</button>
+        <button onclick="rerollDice(2)" id="rerollDiceBtn2" disabled>Volver a Lanzar</button>
+        <button onclick="endTurn(2)" id="endTurnBtn2" disabled>Pasar Turno</button>
+    </div>
+</div>
+<div class="reset-container">
+    <button onclick="resetGame()" id="resetBtn" disabled>Reiniciar Juego</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
